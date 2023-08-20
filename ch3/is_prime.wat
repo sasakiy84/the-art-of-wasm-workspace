@@ -30,7 +30,7 @@
             (local $i i32)
 
             ;; $n が 1 だった場合の処理
-            (if (i32.eq (local.get $n) ($i32.const 1))
+            (if (i32.eq (local.get $n) (i32.const 1))
                 (then
                     i32.const 0 ;; 1 は素数ではない
                     return

@@ -22,11 +22,18 @@ const is_prime = (n) => {
     return 1
 }
 
+const start = process.hrtime();
+
 if (!!is_prime(value)) {
     console.log(`${value} is prime`)
 } else {
     console.log(`${value} is NOT prime`)
 }
 
+const end = process.hrtime(start);
+console.log(end)
+
 // 素数
-// 14桁: 67280421310721	
+// 10桁: 2147483647	(i32 の最大値)
+// wasm で [ 4, 283835900 ]
+// js でも [ 4, 178802500 ]
